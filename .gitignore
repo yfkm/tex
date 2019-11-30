@@ -1,0 +1,6 @@
+*.aux
+*.log
+*.out
+*.gz
+*.pdf
+!56-123-1-SM.pdf
