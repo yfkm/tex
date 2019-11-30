@@ -1,0 +1,115 @@
+% !TeX encoding = UTF-8
+
+
+\documentclass[12pt]{article}  %  Класса article хватит для курсовой и диплома 
+
+\usepackage[utf8x]{inputenc}   % Подключение пакета inputenc и задание кодировки
+\usepackage[english, russian]{babel}    % Локализация 
+\usepackage{amsmath}		   % Пакет специальных символов
+\usepackage{amsfonts}		   
+\usepackage{amssymb}		   % Этих пакетов хватает для набора большинства спецсимволов	
+\usepackage{graphicx}          % Графика
+\usepackage{hyperref} 		   % Навигация по ссылкам в документе
+\usepackage{cite} 		       % Продвинутое цитирование
+\usepackage[a4paper, top=25mm, left=30mm, right=10mm, bottom=25mm]{geometry} % Поля 
+
+
+
+
+
+
+
+
+\begin{document}         
+
+%---------------------------%
+% 	  "Сложные" формулы	    %
+%					        %
+
+\section{<<Сложные>> формулы}
+
+\begin{align}
+&\|A\| \equiv \sup \limits_{x\neq 0} \left\{ \frac{\|Ax\|}{\|x\|} \right\}
+\text{ --- норма оператора } A  \label{operator_norm}  \\ 
+&\|f\|_2 = \left( \int\limits_a^b f^2(x)  dx \right)^{1/2} \notag \text{ ~--- норма в $L^2(a, b)$ }
+\end{align}
+\begin{equation} \label{eq5243}
+a = b + c
+\end{equation}
+
+\begin{equation} \label{eq1}
+a = b + c
+\end{equation}
+
+согласно \ref{eq1}, 
+
+
+
+
+%---------------------------%
+% 	  "Длинные" формулы	    %
+%					        %
+
+\section{``Длинные'' формулы}
+
+\begin{multline*} 
+\int\limits_0^1 x \, dx = \int\limits_0^1 \biggl( \frac{x^2}{2} \biggr)' \, dx = 
+\left. \frac{x^2}{2}\right|_0^1 = \frac{1}{2} = \frac{1}{2} \cdot 1 = 
+\frac{1}{2} \cdot \left(\frac{1}{2} + \frac{1}{4} + \frac{1}{8} + \cdots \ \right) =  \\
+= \frac{1}{2} \cdot \left( \sum_{1}^{\infty} \frac{1}{2^i} \right) = 
+\frac{1}{2} \cdot \left(\frac{1}{2} + \frac{1}{4} +  \frac{1}{8} + \cdots \ \right) = 
+\frac{1}{2} \cdot 1 = \frac{1}{2} = \left. \frac{x^2}{2}\right|_0^1 = 
+\int\limits_0^1 \biggl( \frac{x^2}{2} \biggr)' \, dx = \int\limits_0^1 x \, dx
+\end{multline*}
+
+\begin{equation}
+	\begin{split}
+		\int\limits_0^1 x \, dx 
+		&= \int\limits_0^1 \biggl( \frac{x^2}{2} \biggr)' \, dx = 
+		\left. \frac{x^2}{2}\right|_0^1 = \frac{1}{2} = \frac{1}{2} \cdot 1 = \\
+		&= \frac{1}{2} \cdot \left(\frac{1}{2} + \frac{1}{4} + \frac{1}{8} + \cdots \ \right) = \frac{1}{2} \cdot \left( \sum_{1}^{\infty} \frac{1}{2^i} \right)
+	\end{split}
+\end{equation}
+
+
+
+
+
+%---------------------------%
+% 	     Матрица     	    %
+%					        %
+
+
+%\section{Матрица}
+%\begin{equation}
+%	\begin{pmatrix}
+%		a_{11} & \dots & a_{1n}  \\
+%		\vdots &  & \vdots       \\
+%		a_{m1} & \dots & a_{mn}
+%	\end{pmatrix}
+%\end{equation}
+
+
+
+
+
+%---------------------------%
+% 	     Рисунок     	    %
+%					        %
+
+%\section{Рисунок}
+%
+%\begin{figure}[h]   %  расположение на странице
+%	\begin{center}
+%		\includegraphics[keepaspectratio,width=160mm]{pic.pdf}
+%	\end{center}
+%	\caption{Важный рисунок}
+%	\label{important_pic}
+%\end{figure}
+%
+%Изображение на рис. \ref{important_pic} очень характерно для статей.
+
+
+
+
+\end{document}
