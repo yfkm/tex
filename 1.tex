@@ -1,0 +1,37 @@
+% !TeX encoding = UTF-8
+
+
+\documentclass[12pt]{article}  %  Класса article хватит для курсовой и диплома 
+
+\usepackage[utf8x]{inputenc}   % Подключение пакета inputenc и задание кодировки
+\usepackage[english, russian]{babel}    % Локализация 
+\usepackage{amsmath}		   % Пакет специальных символов
+\usepackage{amsfonts}		   
+\usepackage{amssymb}		   % Этих пакетов хватает для набора большинства спецсимволов	
+\usepackage{graphicx}          % Графика
+\usepackage{hyperref} 		   % Навигация по ссылкам в документе
+\usepackage{cite} 		       % Продвинутое цитирование
+\usepackage[a4paper, top=25mm, left=30mm, right=10mm, bottom=25mm]{geometry} % Поля 
+
+
+
+
+
+
+
+
+\begin{document}         
+
+Всюду далее будем считать, что, как и в [4], [5], $N_1 = N_2 = 4$. 
+Для исследования локальной динамикии системы (12) \-- (7) в окрестности нулевого решения при фиксированном $\nu > 0$ и достаточн малом $0 < \varepsilon \ll 1$ выполним стандартную замену метода нормальных форм (см. [9])
+
+\begin{equation}
+u_{k,j}(t,\tau,\varepsilon) = u_0(t,\tau,k,j) + \varepsilon u_1(t,\tau,k,j) + \dots,\ \ \ \tau = \varepsilon t, \ \ \ k,j = 1,\dots,4.
+\end{equation}
+Здесь
+\begin{equation}
+u_0(t,\tau,k,j) = \sum_{n,m=1}^{4}\left[z_{n,m}(\tau)\exp(i\omega_{n,m}t)+\bar{z}_{n,m}(\tau)\exp(-i\omega_{n,m}t)\right]e_{n,m}(k,j),
+\end{equation}
+причем $z_{n,m}$ \--- пока неизвестные подлежащие определению амплитуды.
+ 
+\end{document}
