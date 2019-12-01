@@ -1,0 +1,49 @@
+% !TeX encoding = UTF-8
+
+
+\documentclass[12pt]{article}  %  Класса article хватит для курсовой и диплома 
+
+\usepackage[utf8x]{inputenc}   % Подключение пакета inputenc и задание кодировки
+\usepackage[english, russian]{babel}    % Локализация 
+\usepackage{amsmath}		   % Пакет специальных символов
+\usepackage{amsfonts}		   
+\usepackage{amssymb}		   % Этих пакетов хватает для набора большинства спецсимволов	
+\usepackage{graphicx}          % Графика
+\usepackage{hyperref} 		   % Навигация по ссылкам в документе
+\usepackage{cite} 		       % Продвинутое цитирование
+\usepackage[a4paper, top=25mm, left=30mm, right=10mm, bottom=25mm]{geometry} % Поля 
+
+
+
+
+
+
+
+
+\begin{document}         
+\begin{multline}
+u(t,k,j) = 2\sqrt{\frac{4C_{(p,q)(r,s)}(1-\nu(\omega^2_{r,s}-1))-9(1-\nu(\omega^2_{p,q}-1))}{16C^2_{(p,q)(r,s)}-81}}\cos(\omega_{p,q}t+\varphi_{p,q})\times\\
+\times\cos\frac{\pi p(k-\frac{1}{2})}4\cos\frac{\pi q(j-\frac{1}{2})}4+2\sqrt{\frac{4C_{(r,s)(p,q)}(1-\nu(\omega^2_{p,q}-1))-9(1-\nu(\omega^2_{r,s}-1))}{16C^2_{(r,s)(p,q)}-81}}\times\\
+\times\cos(\omega_{r,s}t+\varphi_{r,s})\cos\frac{\pi r(k-\frac{1}{2})}4\cos\frac{\pi s(j-\frac{1}{2})}4 + O(\varepsilon),\\
+p=0,\dots,3, \ \ \ q=0,\dots,3, \ \ \ r=0,\dots,3, \ \ \ s=0,\dots,3.
+\end{multline}
+
+Обратимся теперь к случаю,  когда число ненулевых компонент в состоянии равновесия превышает 2:$\rho_{p_1,q_1}\not=0,\dots,\rho_{p_m,q_m}\not=0, m\geq3$. Компоненты матрицы устойчивости имеют в этом случае вид
+\begin{equation}
+\begin{split}
+&\alpha_{(p_1,q_1),(p_1,q_1)}=-\frac{9}{2}\rho^2_{p_1,q_1}, \ \ \ \alpha_{(p_2,q_2),(p_2,q_2)}=-\frac{9}{2}\rho^2_{p_2,q_2}, \\
+&\dots,\\
+&\alpha_{(p_1,q_1),(p_2,q_2)}=-2C_{(p_1,q_1),(p_2,q_2)}\rho_{p_1,q_1}\rho_{p_2,q_2}, \  \alpha_{(p_2,q_2),(p_1,q_1)}=-2C_{(p_2,q_2),(p_1,q_1)}\rho_{p_2,q_2}\rho_{p_1,q_1}, \\
+&\dots,\\
+&\alpha_{(p_1,q_1),(i,j)} = 0,\ \ \ alpha_{(p_2,q_2),(i,j)} = 0,\\
+&\dots,\\
+&\alpha{(i,j),(i,j)}=(1-\nu(\omega^2_{i,j}))-\sum_{s=1}^{m}C_{(p_s,q_s)(i,j)}\rho^2_{p_s,q_s},\\
+&i\not=p_s \bigvee j\not=q_s, s=1,\dots,m\\
+&\alpha_{(i,j),(l,k)} = 0, \\
+&i\not=p_s \bigvee j\not=q_s, s=1,\dots,m \ \ \ i\not=k,j\not=l\\
+&i=0,\dots,3,j=0,\dots,3.
+\end{split}
+\end{equation}
+
+В случае, если хотя бы одно из чисел $C_{(p_s,q_s),(p_w,q_w)}, \ \ s=1,\dots,m, \ \ w=1,\dots,m, s\not=m$ равно трем,коэффициенты характеристического уравнения, полученного из (25), имеют разные знаки, что гарантирует неустойчивость соответствующего состояния равновесия. Пользуясь этим условием, заключаем, что неустойчивыми будут все состояния равновесия с числом ненулевых компонент большим либо равным 5. Тем самым, остается рассмотреть случаи $m=3$ и $m=4$. Для $m=3$ также оказывается, что коэффициенты характеристического многочлена имеют разные знаки, что естественно влечет неустойчивость.
+\end{document}
