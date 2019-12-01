@@ -1,0 +1,61 @@
+% !TeX encoding = UTF-8
+
+
+\documentclass[12pt]{article}  %  Класса article хватит для курсовой и диплома 
+
+\usepackage[utf8x]{inputenc}   % Подключение пакета inputenc и задание кодировки
+\usepackage[english, russian]{babel}    % Локализация 
+\usepackage{amsmath}		   % Пакет специальных символов
+\usepackage{amsfonts}		   
+\usepackage{amssymb}		   % Этих пакетов хватает для набора большинства спецсимволов	
+\usepackage{graphicx}          % Графика
+\usepackage{hyperref} 		   % Навигация по ссылкам в документе
+\usepackage{cite} 		       % Продвинутое цитирование
+\usepackage[a4paper, top=25mm, left=30mm, right=10mm, bottom=25mm]{geometry} % Поля 
+
+
+
+
+
+
+
+
+\begin{document}         
+
+В статье [2] система (5) рассмотрена в бесконечномерном случае, как оказалось, исследование ее нулевого состояния равновесия и однокомпонентных режимов можно выполнить по аналогии с [2]. Задача поиска условий существования и устойчивости многокомпонентных состоянийй равновесия в данном случае имеет существенную специфику, поэтому остановимся именно на ней. 
+
+Сначала рассмотрим режимы с двумя ненулевыми компонентами $\rho_{p,q} \not=0, \rho_{r,s}\not=0, \rho_{i,j}=0, i,j=0,\dots,3, \ \ i\not=p \bigvee j\not=q, \ \ i\not=r \bigvee j\not=s$. Имеем 
+\begin{equation}
+\begin{split}
+&\rho_{p,q}^2 = \frac{4(4C_{(p,q)(r,s)}(1-\nu(\omega_{r,s}^2-1))-9(1-\nu(\omega_{p,q}^2-1)))}{16C^2_{(p,q)(r,s)}-81},\\
+&\rho_{r,s}^2 = \frac{4(4C_{(p,q)(r,s)}(1-\nu(\omega_{p,q}^2-1))-9(1-\nu(\omega_{r,s}^2-1)))}{16C^2_{(p,q)(r,s)}-81},\\
+&C_{(p,q)(r,s)}=3, \ \ p=r \bigvee q=s, \ \  C_{(p,q)(r,s)}=2, \ \ p\not=r \bigwedge  q\not=s.
+\end{split}
+\end{equation}
+
+Линеаризуя систему (5) на состоянии равновесия (6), получаем $16\times16$ матрицу с коэффициентами
+\begin{equation}
+\begin{split}
+&\alpha_{(p,q),(p,q)}=-\frac92\rho^2_{p,q}, \ \ \alpha_{(r,s),(r,s)}=-\frac92\rho^2_{r,s},\\
+&\alpha_{(p,q),(r,s)}=-2C_{(p,q)(r,s)}\rho_{p,q}\rho_{r,s}, \ \ \alpha_{(r,s),(p,q)}=-2C_{(p,q)(r,s)}\rho_{p,q}\rho_{r,s},\\
+&\alpha_{(i,j)(i,j)} = (1 - \nu(\omega^2_{i,j}-1)) - C_{(p,q)(i,j)}\rho^2_{p,q} - C_{(r,s)(i,j)}\rho^2_{r,s},\\
+&i\not=p \bigvee j\not=q, \ i\not=r \bigvee j\not=s,\\
+&\alpha_{(i,j)(k,l)}=0,\\
+&i\not=p \bigvee j\not=q, \ i\not=r \bigvee j\not=s, \ \ i\not=k, j\not=l,\\
+&i=0,\dots,3,j=0,\dots,3.
+\end{split}
+\end{equation}
+Анализ собственных значений этой матрицы приводит к следующему условию устойчивости состояний равновесия (6) :
+\begin{multline}
+(1 - \nu(\omega^2_{i,j}-1)) < \frac8{17+4(C_{(p,q)(r,s)}-2)}((1 - \nu(\omega^2_{p,q}-1))+(1 - \nu(\omega^2_{r,s}-1))),\\
+\forall i\not=p\bigvee j\not=q, \ \ i\not=r\bigvee j\not=s, \ \ i=0,\dots,3,j=0,\dots,3,
+\end{multline}
+из которого нетрудно получить условие сосуществования максимального числа таких устойчивых режимов
+\begin{equation}
+(1 - \nu(\omega^2_{3,3}-1)) < \frac{16}{21}(1 - \nu(\omega^2_{0,0}-1))
+\end{equation}
+\newtheorem{Th}{Теорема}
+\begin{Th}
+Пусть для краевой задачи (12) \--- (7) выполнено условие (23), где $\omega_{0,0},\omega{3,3}$ задаются равенством (14), тогда существоет такое $\varepsilon_0>0$, что для всех $0<\varepsilon<\varepsilon_0$ задача (12) \--- (7) имеет ровно 120 орбитально асимптотически устойчивых торов, асимптотика которых задается следующей формулой
+\end{Th}
+\end{document}
