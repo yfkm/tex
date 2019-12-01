@@ -1,0 +1,93 @@
+% !TeX encoding = UTF-8
+
+
+\documentclass[12pt]{article}  %  Класса article хватит для курсовой и диплома 
+
+\usepackage[utf8x]{inputenc}   % Подключение пакета inputenc и задание кодировки
+\usepackage[english, russian]{babel}    % Локализация 
+\usepackage{amsmath}		   % Пакет специальных символов
+\usepackage{amsfonts}		   
+\usepackage{amssymb}		   % Этих пакетов хватает для набора большинства спецсимволов	
+\usepackage{graphicx}          % Графика
+\usepackage{hyperref} 		   % Навигация по ссылкам в документе
+\usepackage{cite} 		       % Продвинутое цитирование
+\usepackage[a4paper, top=25mm, left=30mm, right=10mm, bottom=25mm]{geometry} % Поля 
+
+
+
+
+
+
+
+
+\begin{document}         
+
+Всюду далее будем считать, что, как и в [4], [5], $N_1 = N_2 = 4$. 
+Для исследования локальной динамикии системы (12) \-- (7) в окрестности нулевого решения при фиксированном $\nu > 0$ и достаточн малом $0 < \varepsilon \ll 1$ выполним стандартную замену метода нормальных форм (см. [9])
+
+\begin{equation}
+u_{k,j}(t,\tau,\varepsilon) = u_0(t,\tau,k,j) + \varepsilon u_1(t,\tau,k,j) + \dots,\ \ \ \tau = \varepsilon t, \ \ \ k,j = 1,\dots,4.
+\end{equation}
+Здесь
+\begin{equation}
+u_0(t,\tau,k,j) = \sum_{n,m=1}^{4}\left[z_{n,m}(\tau)\exp(i\omega_{n,m}t)+\bar{z}_{n,m}(\tau)\exp(-i\omega_{n,m}t)\right]e_{n,m}(k,j),
+\end{equation}
+причем $z_{n,m}$ \--- пока неизвестные подлежащие определению амплитуды.
+ 
+В данной работе обратимся лишь к нерезонансному случаю, т.е. выберем параметры $\varsigma_1, \varsigma_2$ таким образом, чтобы исключить всевозможные резонансы третьего порядка между собственными частотами $\omega_{n,m}$, иначк говоря, исключим одновременное выполнение равенств вида $\omega_{n_0,m_0} = s_1\omega_{n_1,m_1} +  s_2\omega_{n_2,m_2} + s_3\omega_{n_3,m_3},\ n_0 = \pm n_1 \pm n_2 \pm n_3, m_0 = \pm m_1 \pm m_2 \pm m_3$ для любых наборов индексов  $n_k,m_k, k=0,\dots,3$, таких что $(s_1, s_2, s_3): |s_1|+|s_2|+|s_3| = 3$ и при любой расстановке знаков во втором и третьем соотношениях. Тождественные резонансы $\omega_{n_0,m_0}=\omega_{n_0,m_0}+\omega_{n_1,m_1}-\omega_{n_1,m_1}$ из рассмотрения, естесственно, исключаются.
+
+После подстановки (1) в краевую задачу (12) \-- (7) приравниваем коэффициенты при одинаковых степенях $\varepsilon$, после чего на первом шаге получаем верное тождество, а на втором приходим к следующей краевой задаче для $u_1(t,\tau,k,j):$
+\begin{multline}
+\frac{\partial^2u_1}{\partial t^2}+u_1-\mathcal{L}^{*}u_1 = \frac{\partial}{\partial t}\left[u_0+\nu \mathcal{L}^{*}u_0-\frac{u_0^3}{3}-2\frac{\partial u_0}{\partial\tau}\right],\\
+u_1(0,j)=u_1(1,j), u_1(4,j)=u_1(5,j), u_1(k,0)=u_1(k,1), u_1(k,4)=u_1(k,5), \\
+k=1,\dots,4, j=1,\dots,4.
+\end{multline}
+Система (3) разрешива в классе периодических по $t$ функций в том и только в том случае, если в неоднородности отсутствуют гармоники вида (13). Приравнивая коэффициенты при этих гармониках к нулю, приходим к системе относительно неизветсных комплексных амплитуд $z_{n,m}$
+\begin{multline}
+2\frac{dz{n,m}}{d\tau}=(1-\nu(\omega_{n,m}^2-1))z_{n,m}-\frac94 z_{n,m}|z_{n,m}|^2 - 3\sum_{k=0,k\not=n}^{3}z_{n,m}|z_{k,m}|^2 - \\
+-3\sum_{s=0,s\not=m}^{3}z_{n,m}|z_{n,s}|^2-2\sum_{k,s=0,k\not=n,s\not=m}^{3}z_{n,m}|z_{k,s}|^2, \ \ \ n=0,\dots,3, \ m=0,\dots,3.
+\end{multline}
+Воспользовавшись заменой $z_{n,m}=\rho_{n,m}\exp(i\varPhi_{n,m})$, приходим к следующей системе, с которой и будем иметь дело в дальнейшем:
+\begin{multline}
+\frac{d\rho_{n,m}}{d\tau}=(1-\nu(\omega_{n,m}^2-1))\rho_{n,m}-\frac94 \rho_{n,m}^3 - 3\rho_{n,m}\sum_{k=0,k\not=n}^{3}\rho_{k,m}^2 - \\
+-3\rho_{n,m}\sum_{s=0,s\not=m}^{3}\rho_{n,s}^2-2\rho_{n,m}\sum_{k,s=0,k\not=n,s\not=m}^{3}\rho_{k,s}^2,\ \ \ n=0,\dots,3, \ m=0,\dots,3.
+\end{multline}
+
+В статье [2] система (5) рассмотрена в бесконечномерном случае, как оказалось, исследование ее нулевого состояния равновесия и однокомпонентных режимов можно выполнить по аналогии с [2]. Задача поиска условий существования и устойчивости многокомпонентных состоянийй равновесия в данном случае имеет существенную специфику, поэтому остановимся именно на ней. 
+
+Сначала рассмотрим режимы с двумя ненулевыми компонентами $\rho_{p,q} \not=0, \rho_{r,s}\not=0, \rho_{i,j}=0, i,j=0,\dots,3, \ \ i\not=p \bigvee j\not=q, \ \ i\not=r \bigvee j\not=s$. Имеем 
+\begin{equation}
+\begin{split}
+&\rho_{p,q}^2 = \frac{4(4C_{(p,q)(r,s)}(1-\nu(\omega_{r,s}^2-1))-9(1-\nu(\omega_{p,q}^2-1)))}{16C^2_{(p,q)(r,s)}-81},\\
+&\rho_{r,s}^2 = \frac{4(4C_{(p,q)(r,s)}(1-\nu(\omega_{p,q}^2-1))-9(1-\nu(\omega_{r,s}^2-1)))}{16C^2_{(p,q)(r,s)}-81},\\
+&C_{(p,q)(r,s)}=3, \ \ p=r \bigvee q=s, \ \  C_{(p,q)(r,s)}=2, \ \ p\not=r \bigwedge  q\not=s.
+\end{split}
+\end{equation}
+
+Линеаризуя систему (5) на состоянии равновесия (6), получаем $16\times16$ матрицу с коэффициентами
+\begin{equation}
+\begin{split}
+&\alpha_{(p,q),(p,q)}=-\frac92\rho^2_{p,q}, \ \ \alpha_{(r,s),(r,s)}=-\frac92\rho^2_{r,s},\\
+&\alpha_{(p,q),(r,s)}=-2C_{(p,q)(r,s)}\rho_{p,q}\rho_{r,s}, \ \ \alpha_{(r,s),(p,q)}=-2C_{(p,q)(r,s)}\rho_{p,q}\rho_{r,s},\\
+&\alpha_{(i,j)(i,j)} = (1 - \nu(\omega^2_{i,j}-1)) - C_{(p,q)(i,j)}\rho^2_{p,q} - C_{(r,s)(i,j)}\rho^2_{r,s},\\
+&i\not=p \bigvee j\not=q, \ i\not=r \bigvee j\not=s,\\
+&\alpha_{(i,j)(k,l)}=0,\\
+&i\not=p \bigvee j\not=q, \ i\not=r \bigvee j\not=s, \ \ i\not=k, j\not=l,\\
+&i=0,\dots,3,j=0,\dots,3.
+\end{split}
+\end{equation}
+Анализ собственных значений этой матрицы приводит к следующему условию устойчивости состояний равновесия (6) :
+\begin{multline}
+(1 - \nu(\omega^2_{i,j}-1)) < \frac8{17+4(C_{(p,q)(r,s)}-2)}((1 - \nu(\omega^2_{p,q}-1))+(1 - \nu(\omega^2_{r,s}-1))),\\
+\forall i\not=p\bigvee j\not=q, \ \ i\not=r\bigvee j\not=s, \ \ i=0,\dots,3,j=0,\dots,3,
+\end{multline}
+из которого нетрудно получить условие сосуществования максимального числа таких устойчивых режимов
+\begin{equation}
+(1 - \nu(\omega^2_{3,3}-1)) < \frac{16}{21}(1 - \nu(\omega^2_{0,0}-1))
+\end{equation}
+\newtheorem{Th}{Теорема}
+\begin{Th}
+	Пусть для краевой задачи (12) \--- (7) выполнено условие (23), где $\omega_{0,0},\omega{3,3}$ задаются равенством (14), тогда существоет такое $\varepsilon_0>0$, что для всех $0<\varepsilon<\varepsilon_0$ задача (12) \--- (7) имеет ровно 120 орбитально асимптотически устойчивых торов, асимптотика которых задается следующей формулой
+\end{Th}
+
+\end{document}
