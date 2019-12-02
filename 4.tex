@@ -1,0 +1,63 @@
+% !TeX encoding = UTF-8
+
+
+\documentclass[12pt]{article}  %  Класса article хватит для курсовой и диплома 
+
+\usepackage[utf8x]{inputenc}   % Подключение пакета inputenc и задание кодировки
+\usepackage[english, russian]{babel}    % Локализация 
+\usepackage{amsmath}		   % Пакет специальных символов
+\usepackage{amsfonts}		   
+\usepackage{amssymb}		   % Этих пакетов хватает для набора большинства спецсимволов	
+\usepackage{graphicx}          % Графика
+\usepackage{hyperref} 		   % Навигация по ссылкам в документе
+\usepackage{cite} 		       % Продвинутое цитирование
+\usepackage[a4paper, top=25mm, left=30mm, right=10mm, bottom=25mm]{geometry} % Поля 
+
+\begin{document}       
+	
+	Случай $m=4$ несколько более сложный. Выпишем значения ненулевых компонентов такого состояния равновесия
+\begin{equation}
+\begin{split}
+&\rho^2_{p_1,q_1}=\frac{1}{33}(100(1-\nu(\omega^2_{p_1,q_1}-1))-32(1-\nu(\omega^2_{p_2,q_2}-1))-\\
+&-32(1-\nu(\omega^2_{p_3,q_3}-1))-32(1-\nu(\omega^2_{p_4,q_4}-1))),\\
+&\rho^2_{p_2,q_2}=\frac{1}{33}(100(1-\nu(\omega^2_{p_2,q_2}-1))-32(1-\nu(\omega^2_{p_1,q_1}-1))-\\
+&-32(1-\nu(\omega^2_{p_3,q_3}-1))-32(1-\nu(\omega^2_{p_4,q_4}-1))),\\
+&\rho^2_{p_3,q_3}=\frac{1}{33}(100(1-\nu(\omega^2_{p_3,q_3}-1))-32(1-\nu(\omega^2_{p_2,q_2}-1))-\\
+&-32(1-\nu(\omega^2_{p_1,q_1}-1))-32(1-\nu(\omega^2_{p_4,q_4}-1))),\\
+&\rho^2_{p_4,q_4}=\frac{1}{33}(100(1-\nu(\omega^2_{p_4,q_4}-1))-32(1-\nu(\omega^2_{p_2,q_2}-1))-\\
+&-32(1-\nu(\omega^2_{p_3,q_3}-1))-32(1-\nu(\omega^2_{p_1,q_1}-1))).
+\end{split}
+\end{equation}
+Понятно, что условия существования таких состояний равновесия имеют вид
+\begin{equation}
+\begin{split}
+&100(1-\nu(\omega^2_{p_1,q_1}-1))-32(1-\nu(\omega^2_{p_2,q_2}-1))-\\
+&-32(1-\nu(\omega^2_{p_3,q_3}-1))-32(1-\nu(\omega^2_{p_4,q_4}-1)) > 0, \\
+&100(1-\nu(\omega^2_{p_2,q_2}-1))-32(1-\nu(\omega^2_{p_1,q_1}-1))-\\
+&-32(1-\nu(\omega^2_{p_3,q_3}-1))-32(1-\nu(\omega^2_{p_4,q_4}-1)) > 0, \\
+&100(1-\nu(\omega^2_{p_3,q_3}-1))-32(1-\nu(\omega^2_{p_2,q_2}-1))-\\
+&-32(1-\nu(\omega^2_{p_1,q_1}-1))-32(1-\nu(\omega^2_{p_4,q_4}-1)) > 0, \\
+&100(1-\nu(\omega^2_{p_4,q_4}-1))-32(1-\nu(\omega^2_{p_2,q_2}-1))-\\
+&-32(1-\nu(\omega^2_{p_3,q_3}-1))-32(1-\nu(\omega^2_{p_1,q_1}-1)) > 0, \\
+\end{split}
+\end{equation}
+Задача об устойчивости данных состояний равновесия распадается на две независящие друг от друга части. Коэффициенты первой из них имеют вид
+\begin{equation}
+\begin{split}
+&\alpha_{(p_1,q_1),(p_1,q_1)} = -\frac{9}{2}\rho^2_{p_1,q_1}, \ \ \alpha_{(p_2,q_2),(p_2,q_2)} = -\frac{9}{2}\rho^2_{p_2,q_2},\\
+&\dots,\\
+&\alpha_{(p_1,q_1),(p_2,q_2)} = - 2C_{(p_1,q_1)(p_2,q_2)}\rho^2_{p_1,q_1}\rho^2_{p_2,q_2}, \ \ \alpha_{(p_2,q_2),(p_1,q_1)} = - 2C_{(p_2,q_2)(p_1,q_1)}\rho^2_{p_2,q_2}\rho^2_{p_1,q_1},\\
+&\dots
+\end{split}
+\end{equation}
+а второй \---
+\begin{equation}
+\begin{split}
+&\alpha_{(i,j),(i,j)} = (1-\nu(\omega^2_{i,j}-1)) - \sum_{s=1}^{m}C_{(p_s,q_s)(i,j)}\rho^2_{(p_s,q_s)}, \\
+&i\not=p_s \bigvee j\not=q_s, s=1,\dots,4,\\
+&\alpha_{(i,j),(k,l)}=0,\\
+&i\not=p_s \bigvee j\not=q_s, s=1,\dots,4, \ \ i\not=k, j\not=l\\
+&i=0,\dots,3,j=0,\dots,3.
+\end{split}
+\end{equation}
+\end{document}
