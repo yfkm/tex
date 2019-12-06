@@ -231,8 +231,38 @@ n=1,\dots,4, \ \ m=1,\dots,4, \ \ k=1,\dots,4, \ \ j=1,\dots,4&
 \end{Th}
 \begin{multline}
 u(t,k,j) = 2\sqrt{\frac{4C_{(p,q)(r,s)}(1-\nu(\omega^2_{r,s}-1))-9(1-\nu(\omega^2_{p,q}-1))}{16C^2_{(p,q)(r,s)}-81}}\cos(\omega_{p,q}t+\varphi_{p,q})\times\\
-\times\cos\frac{\pi p(k-\frac{1}{2})}4\cos\frac{\pi q(j-\frac{1}{2})}4+2\sqrt{\frac{4C_{(r,s)(p,q)}(1-\nu(\omega^2_{p,q}-1))-9(1-\nu(\omega^2_{r,s}-1))}{16C^2_{(r,s)(p,q)}-81}}\times\\
-\times\cos(\omega_{r,s}t+\varphi_{r,s})\cos\frac{\pi r(k-\frac{1}{2})}4\cos\frac{\pi s(j-\frac{1}{2})}4 + O(\varepsilon),\\
-p=0,\dots,3, \ \ \ q=0,\dots,3, \ \ \ r=0,\dots,3, \ \ \ s=0,\dots,3.
+\times\sin\frac{\pi pk}5\sin\frac{\pi qj}5 +2\sqrt{\frac{4C_{(r,s)(p,q)}(1-\nu(\omega^2_{p,q}-1))-9(1-\nu(\omega^2_{r,s}-1))}{16C^2_{(r,s)(p,q)}-81}}\times\\
+\times\cos(\omega_{r,s}t+\varphi_{r,s})\sin\frac{\pi rk}4\sin\frac{\pi sj}4 + O(\varepsilon),\\
+p,q,r,s=0,\dots,3, \ \  k,j=1,\dots,4.
 \end{multline}
+
+Для четырехкомпонентных режимов условие устойчивости соответствующего состояния равновесия может быть сформулировано следующим образом:
+\begin{equation}
+\begin{split}
+&(1-\nu(\omega^2_{i,j}-1))<\frac{8}{33}(1-\nu(\omega^2_{p_1,q_1}-1))+(1-\nu(\omega^2_{p_2,q_2}-1))+\\
+&+(1-\nu(\omega^2_{p_3,q_3}-1))+(1-\nu(\omega^2_{p_4,q_4}-1)),\\
+&\forall i\not=p_s \bigvee j\not=q_s,\ \ s=1,\dots,4, \\ 
+&i,j=0,\dots,3,
+\end{split}
+\end{equation}
+а при выполнении условия 
+\begin{equation}
+(1-\nu(\omega^2_{3,3}-1))<\frac{32}{33}(1-\nu(\omega^2_{0,0}-1))
+\end{equation}
+в исходной системе сосуществует максимальное число четырехкомпонентных режимов, в частности выполнена теорема
+\begin{Th}
+	Пусть для краевой задачи (12) \--- (6) выполнено условие (36), где $\omega_{0,0},\omega{3,3}$ задаются равенством (14), тогда существоет такое $\varepsilon_0>0$, что для всех $0<\varepsilon<\varepsilon_0$ задача (12) \--- (7) имеет ровно 24 орбитально асимптотически устойчивых торов, асимптотика которых задается следующей формулой:
+\end{Th}
+
+\begin{equation}
+\begin{split}
+&u(t,k,j)=\rho_{q_1,p_1}\cos(\omega_{p_1,q_1}t + \varphi_{p_1,q_1})\sin\frac{\pi p_1k}5\sin\frac{\pi q_1j}{5}\\
+&\rho_{q_2,p_2}\cos(\omega_{p_2,q_2}t + \varphi_{p_2,q_2})\sin\frac{\pi p_2k}5\sin\frac{\pi q_2j}5\\
+&\rho_{q_3,p_3}\cos(\omega_{p_3,q_3}t + \varphi_{p_3,q_3})\sin\frac{\pi p_3k}5\sin\frac{\pi q_3j}5\\
+&\rho_{q_4,p_4}\cos(\omega_{p_4,q_4}t + \varphi_{p_4,q_4})\sin\frac{\pi p_4k}5\sin\frac{\pi q_4j}5 + O(\varepsilon),\\
+&p_s=1,\dots,4,\ \ q_s=1,\dots,4,\ \ s=1,\dots,4.\ \ 
+\end{split}
+\end{equation}
+
+В заключение заметим, что обе системы (12) - (7) и (12) - (6) демонстрируют достаточно сложную динамику, состоящую в сосуществовании большого числа многочастотных режимов. Тем самым здесь реализуется аналог хаотической буферности, найденной в [2], сопровождающийся, однако, рядом эффектов, обусловленных конечномерностью задачи.
 \end{document}
